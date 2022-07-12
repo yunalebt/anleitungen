@@ -1,0 +1,113 @@
+Android Backup
+
+Mit folgender Anleitung kann man sehr schnell ein Android Backup erstellen und die Bilder, Musik und Downloads auf dem heimischen PC laden. Das Handy wird dann gesäubert und man kann mit einem cleanen Handy durch die Gegend laufen; das ist besonders gut, wenn man anzügliche Bilder an seine Partnerin / seinen Partner sendet. Das Handy kann ja mal verloren gehen, oder, im schlechtesten Falle, geraubt oder geklaut werden. Und dann möchte man nicht seine intimsten Bilder auf dem Handy haben...
+
+Also: Hin und wieder einfach mal die wichtigsten Dateien auf den PC speichern. 
+
+Du brauchst:
+
+• Einen PC / Laptop
+• Ein USB-Kabel für dein Handy
+• genug Speicherplatz auf deiner Festplatte; mindestens so groß, wie die Dateien auf deinem Handy brauchen.
+
+Dann legen wir mal los.
+• Wir laden uns die "Platform Tools" herunter:
+https://developer.android.com/studio/releases/platform-tools
+Hier das Betriebssystem auswählen; bei den Meisten wird es wohl "Windows" sein. Eine zip-Datei wird heruntergeladen.
+
+• Wir gehen in den Ordner, wo sich die gerade herunter geladene zip-Datei befindet.
+• Rechtsklick auf die zip-Datei > Alle extrahieren... > Extrahieren anklicken
+
+Das Verzeichnis wird nun extrahiert.
+
+• Wir betreten das Verzeichnis "platform-tools_r33.0.2-windows" (jedenfalls bei der Windows-Variante).
+• Dort finden wir jetzt einen Ordner namens "platform-tools".
+• Genau hier (nicht! in platform-tools) speichern wir die "copy_basic.bat".
+
+Jetzt liegen
+platform-tools [Verzeichnis]
+copy_basic.bat [Batch-Datei]
+
+zusammen in einem Verzeichnis.
+
+Zuerst schalten wir auf dem Android den Entwickler-Modus frei.
+• Wir nehmen das Android-Handy zur Hand.
+• Ziehen den Bildschirm von oben herab und wählen "Einstellungen" (Zahnrad)
+• Menüpunkt: "Über das Telefon"
+• runter scrollen bis "Build"
+• Build Nummer 8x drücken
+
+Jetzt sind wir Entwickler.
+
+Nun in wählen wir in den Einstellungen 
+• System > Entwickleroptionen
+• Entwickleroptionen Verwenden: Häkchen aktiviert
+In den Entwickleroptionen:
+• USB-Debugging aktivieren
+• Warnmeldung bestätigen
+• Handy mit einem USB-Kabel an USB 2.0 Port anschließen.
+
+Wir sind nun bereit für das Kopieren. Wenn gleich das Programm läuft:
+• NICHT am Kabel ziehen
+• NICHT das Handy ausschalten
+• NICHT den PC ausschalten
+• Hoffen, dass jetzt gerade kein Stromausfall passiert
+• abwarten, wenn die Anzeige hängt
+• abwarten bei "pull: building file list"
+
+sonst könnte ein Datenverlust passieren.
+
+Bereit? Dann geht es los.
+
+• Doppelklick auf copy_basic.bat
+• Hinweis im Programm: "daemon not running"
+• Auf dem Handy erscheint nun: "USB-Debugging zulassen?" > Bestätigen.
+
+Je nach Datenmenge kann das jetzt alles eine Weile dauern. Im Kommandozeilenfenster werden wir nun über den laufenden Vorgang informiert.
+
+_____
+
+Hinweis: Gelöschte Daten sind niemals gelöscht, sondern nur "zum Überschreiben markiert". Das bedeutet: Sie sind noch da, nur unsichtbar und werden nach und nach überschrieben. Zur Verbildlichung: Stell dir vor, ein Mieter kündigt seinen Mietvertrag. Er darf aber, solange kein anderer in der Wohnung wohnen möchte, dort wohnen bleiben. Auch wenn das Klingelschild vom Mieter nicht mehr draußen dran hängt, kann man ihn trotzdem noch in der Wohnung antreffen; bis zu dem Zeitpunkt, wo ein neuer Mieter einzieht. Dann zieht der erste Mieter aus und ist verschwunden.
+
+So ungefähr kann man sich das mit den Dateien vorstellen. Deswegen sollte man regelmäßig freien Speicherplatz überschreiben, damit alte Daten (durch Fremde) nicht mehr hergestellt werden können.
+
+Optional: Handyspeicher überschreiben
+
+• Die App "SuperFreeze" auf dem Handy installieren (die Webseite ist manchmal etwas langsam)
+Und zwar: Version 0.16.1 
+Entweder hier: https://f-droid.org/de/packages/superfreeze.tool.android (dort auf "APK herunterladen" klicken)
+oder hier, Direktlink zur Installationsdatei: https://f-droid.org/repo/superfreeze.tool.android_161.apk
+
+• Die App "Dummy File Creator" installieren
+(hab ich bisher nur im PlayStore gefunden)
+https://play.google.com/store/apps/details?id=jp.nomunomu.dummy
+
+Optional: Chrome Cache leeren
+• Chrome öffnen
+• Punkte drücken
+• Einstellungen
+• Datenschutz und Sicherheit
+• Browserdaten löschen
+• Zeitraum: Gesamte Zeit
+• Browserverlauf, Cookies und Websitedaten, Bilder und Dateien im Cache auswählen
+warten
+• Chrome schließen
+
+Nun:
+• "SuperFreeze" öffnen und sämtlich laufende Apps anhalten
+• "Dummy File Creator" öffnen
+• "Diese App wurde für eine ältere Version entwickelt" bestätigen
+• Generate (FULL) auswählen
+• Jetzt wird der ganze freie Speicherplatz überschrieben.
+• Processing abwarten; der freie Speicher läuft nun innerhalb ein paar Minuten voll.
+• Processing: storage is analyzed abwarten
+• Delete dummy file: Button drücken
+• Processing: storage is analyzed abwarten
+• Fertig.
+
+Optional:
+• System > Entwickleroptionen deaktivieren
+oder optional: 
+• System > Entwickleroptionen > USB-Debugging deaktivieren
+
+Fertig :-)
